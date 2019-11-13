@@ -9,8 +9,8 @@ def directors_totals(nds)
   dir_gross = 0
   dir_index = 0 
   while dir_index < nds.length do 
-    dir_name = nds[dir_index][:name]
-    dir_gross += gross_for_director(dir_name)
+    dir = nds[dir_index]
+    dir_gross += gross_for_director(dir)
     dir_index += 1 
   end 
   dir_gross
