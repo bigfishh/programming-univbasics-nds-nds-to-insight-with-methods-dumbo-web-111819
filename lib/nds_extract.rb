@@ -7,11 +7,10 @@ require 'pp'
 
 def directors_totals(nds)
   result = {}
-  dir_gross = 0
   dir_index = 0 
   while dir_index < nds.length do 
     dir = nds[dir_index]
-    dir_gross += gross_for_director(dir)
+    result[dir[:name]] += gross_for_director(dir)
     dir_index += 1 
   end 
   dir_gross
